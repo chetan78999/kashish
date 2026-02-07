@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    animation: zoom 0.4s ease;
+}
+
+.popup-content img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Kashish</h1>
+
+    <p>
+        Bas ek last question hai,<br>
+        
+    </p>
+
+    <h2>Will you be my Valentine? 💕</h2>
+
+    <a href="#" class="button" onclick="showPopup()">YES 💖</a>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <img src="images/surprise.jpg" alt="Us 💕">
+        <p>
+            Moti buddhu 💗<br>
+            
+        </p>
+    </div>
+</div>
+
+<script>
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+</script>
+
+</body>
+</html>
